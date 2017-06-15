@@ -1,0 +1,134 @@
+1. collections
+
+2. multithreading
+3. exception handling
+4. oops concepts
+5. class loading
+
+
+15. encapsulation, inheritance, polymorphism
+What is the difference between an interface and abstract class?
+Why do we need interfaces in Java? Instead of an interface, we can write the methods in the class itself. Why do we need seperate interface?
+when objects are eligible for garbage collection 
+1. What is the tree structure of collection?
+2. how to remove duplicates in a list 
+ans: by converting into set  - pass list to hashset constructor 
+3. If you are keeping user defined object in a set, how set will identify if incoming object is duplicate or not.
+4. what is synchronization? how to create a synchronized list.
+collections. synchronizedList(list)
+5. how this method call will make the list synchronized
+ans -> it will return list object, which is thread safe. all methods in that list are synchronized
+internally our methods are called and other threads are not allowed to call our methods
+6. what are the conditions to use user defined object key to hashmap?
+ans : the object should override hashcode and equals method, and should be immutable.
+7. diff bt/w hash table and hash map
+
+hash table is synchronized and hash map is not synchronized
+performance wise hash map -> but not thread safe
+8. what is copyOnWrite array list 
+it is prent in java.util.concurrent, it is thread safe array list.. no need to write any synchronized. that is by doing snapshot approach. (array list size is placed in a snapshot, checks for every operation if size changes or not, if size changes it will stop)
+it will create individual array list for every operation, uses all space, useful when iteration operations are highly outnumbered mutative operations. 
+9. what is OperationNotSupported Exception? when it will occur, example
+
+10. different kinds of exceptions
+-> how the checked exceptions are handled --> try and catch
+-> diff btw throw and throws  -> throws is to indicate that this method can create exception, throw is to create an excption object and throw it.
+-> what is finally and when it is not called
+11. how to write user defined exception
+-> extend exception class and overrite toString()
+12. how class loading happens in JVM?
+-> using class loaders
+13. what is classpath and path
+class path -> points to jar files  inside lib )
+path -> JDK  executable file location.
+14. how to create an object if we know the classname and location dynamically.
+using reclection API 
+class.forName.newInstance()
+
+
+16. jsp lo what are different tags
+scriplets <% %> 
+directive tags<%@ %>
+declarative tags<%! %>
+expression tags<%= %>
+EL ${}\
+standard action tags
+other action tags
+17. what are jsp implicit objects
+request 
+response
+session
+config
+application
+out
+ecxeption
+page context
+page
+18. scopes in jsp
+request
+session
+application
+pagescope
+19. what is singleton object and how to create it and why to use it.
+private constructor, static method
+when using util classes, no need to create multiple instances
+20. hibernate
+what is ORM?
+21. what are objlect life cycle in hibernate and how much object become all these
+transient
+persistent
+detached
+remove
+22. which build tools you are aware of
+23. how do you create archive file in maven
+mvn install
+24. how do you add jar files in maven
+pom.xml -> add dependency tags
+25. different types of repositories in maven
+local - desktop
+remote - specific to accy/ org
+central - given by maven people/ apache
+26. how do you rate yourself in Java?
+27. What is immutable object in Java? Can you change values of a immutable object?
+28. How to create a immutable object in Java? Does all property of immutable object needs to be final?
+29. What is difference between String, StringBuffer and StringBuilder? When to use them?
+30. Why String class is final or immutable?
+31. Is Java Pass by Reference or Pass by Value?
+32. What is OutOfMemoryError in java? How to deal with java.lang.OutOfMemeryError error?
+33. What is the use of the finally block? Is finally block in Java guaranteed to be called? When finally block is NOT called?
+34. What is Marker interface? How is it used in Java?
+
+
+constructor arguments for mandatory dependencies and setters for optional dependencies.
+difference between map and props in spring
+-> Arrays.sort(arrayName);
+-> Arrays.toString(arrayName); - print array
+-> Quicksort time complexity O(nlogn)
+-> Mergesort time complexity O(nlogn)
+-> Arrays.java's sort method uses quicksort for arrays of primitives and merge sort for arrays of objects.
+-> write algorithm to sort an array in Java
+-> check for palindrome 
+-> oops concepts 
+-> exceptional handling
+-> What is the purpose of serialization?
+Answer: Serialization is the conversion of an object to a series of bytes, so that the object can be easily saved to persistent storage or streamed across a communication link. The byte stream can then be deserialised – converted into a replica of the original object.
+
+-> What is the difference between JDK and JRE?
+Answer: JRE is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM.It physically exists.It contains set of libraries + other files that JVM uses at runtime. 
+JDK is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
+
+-> What is the difference between equals() and “==” ?
+Answer: Equals is intended to check logical equality and == checks if both references point to same object. 
+a == b;        // Compares references, not values.
+a.equals(b);  // Compares values for equality.
+	String a = "hello"; String b = "Kathe";
+	if(a.equals(b)) s.o.p(Equal for .equals )
+	else if(a == b) s.o.p(Equal for ==)
+o/p: Equals for .equals
+
+-> When will you use Comparator and Comparable interfaces?
+Answer: java.util.Comparator and java.lang.Comparable
+java.util.Comparator compares some other class’s instances, while java.lang.Comparable compares itself with another object.
+
+-> Does for interface .class file is generated?
+- Yes

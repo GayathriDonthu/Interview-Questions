@@ -1,0 +1,338 @@
+Core Java
+
+1. What are OOPS concepts? Explain each in detail.
+- Encapsulation
+- Inheritance
+- Polymorphism
+
+2. What are access specifiers?
+- private
+- protected
+- public
+
+3. how to make restrict a class to be extended? 
+-  final class/private constructor
+
+4. Overloading and overriding, difference b/w them
+5. Why overloading is called as static polymorphism and overriding called as dynamic polymorphism
+- which method to call is decided at run time
+6. Different types of exceptions
+- checked, unchecked & errors( checked - compile time, unchecked - run time)
+7. Difference between them
+8. Difference between throw and throws
+   throws - to notify method that this method may throw exception
+   throw - creates exception object and throws it
+9. How to handle exceptions
+- try and catch
+10. Diff b/w final, finally, finalize
+- final variable cannot be changed, final method cannot be overriden, final class cannot be extended
+- finally executes irrespective of exception caused or not. It will not execute only when system.exit() is present.
+- finalize is called by garbage collector on an object when garbage collector determines that there are no more references to object. 
+- A subclass overrides the finalize method to dispose of system resources or to perform other cleanup.
+
+11. Why we need finally
+ - for resource closing
+ 
+12. What is try with resource
+try-with-resource -> try(resource){--code----}
+
+public class TryWithResource {
+	public static void main(String[] args) {
+		
+		//BufferedReader br = null;
+		
+		try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\gayathri.guttikonda\\Desktop\\GFT_Evaluation_Questions.txt"))){
+			
+			String line;
+			while((line = br.readLine()) != null)
+				System.out.println(line);
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}
+
+
+13. What are Generics? Why we need them?
+- Generics add a way to specify concrete types to general purpose classes and methods that operated on Object before.
+Benefits
+- Stronger type checks at compile time.
+- Elimination of casts.
+- Enabling programmers to implement generic algorithms
+
+14. What is collection hierarchy?
+
+Collection - Set, List, Queue, Deque
+			 Set - SortedSet, HashSet, LinkedHashSet
+				   SortedSet - TreeSet
+			 List - Vector, ArrayList, LinkedList
+			 Queue - PriorityQueue
+			 Deque - ArrayDeque, LinkedList
+Map - SortedMap, HashTable, HashMap, LinkedHashMap, NavigableMap, ConcurrentMap, ConcurrentNavigableMap
+	  SortedMap - TreeMap
+
+15. Diff b/w list and set
+- list is ordered and allows duplicates
+- set is unorderd and does not allow duplicates
+
+16. What is TreeSet 
+- sorted without duplicates
+17. What is TreeMap 
+- sorted map
+18. What is HashMap
+- Hash table based implementation of the Map interface. This implementation provides all of the optional map operations, and permits null values and the null key. (The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.) This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time.
+
+19. How userdefined object will be inserted into TreeMap ?
+
+
+20. What is diff between Comparator and Comparable
+    user defined sorting order - both
+    collections.sort() -> comparator is an argument
+    multiple sort orders for different objects of same Employee -> comparator
+    single sorting -> comparable
+	
+21. What is queue? Why we need queue? 
+    to hold multiple objects prior to processing
+	
+22. What is Singleton?
+- limiting the number of objects creation to one.
+
+23. How to make object singleton?
+- create private constructor
+- create static object
+- create static method and return the static object
+
+
+public class Singleton {
+	
+	private static Singleton s = new Singleton();
+	
+	private Singleton(){}
+	
+	public static Singleton getInstance(){
+		return s;
+	}
+	
+	public void display(){
+		System.out.println("singleton display method");
+	}
+	
+}
+
+public class SingletonDemo {
+	
+	public static void main(String[] args) {
+		Singleton s = Singleton.getInstance();
+		s.display();
+	}
+}
+
+Output: 
+singleton display method
+
+24. What is immutable object?
+- An object is considered immutable if its state cannot change after it is constructed.
+
+25. How to make object immutable?
+- no setter() methods
+- All fields final and private
+- final class or private constructor
+- If the instance fields include references to mutable objects, don't allow those objects to be changed
+  - Don't provide methods that modify the mutable objects.
+  - Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, 	create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
+
+26. What is a thread? How to create a thread?
+- A thread is a light weight smallest part of a process that can run concurrently with the other parts of the same process.
+- Create thread in 2 ways
+  - By implementing Runnable Interface
+  - By extending Thread class.
+  
+27. what is thread safe? How to make object thread safe? What is synchronization?
+- Code that is safe to call by multiple threads is called thread safe.
+
+Making an object thread-safe
+- Use of the keyword synchronized
+- Use of atomic wrapper classes from java.util.concurrent.atomic package
+- Use of locks from java.util.concurrent.locks package
+- Using thread safe collection classes.
+- Using volatile keyword with variables to make every thread read the data from memory, not read from thread cache.
+
+Synchronization
+
+- Threads communicate primarily by sharing access to fields and the object references fields refer to. This form of communication is extremely efficient but makes 2 kinds of errors possible: thread interference and memory consistency errors. The tool needed to prevent these errors in Synchornization.
+
+28. What is synchronized method? what is synchronized block? difference between them?
+- Adding synchronized keyword before method makes it synchronized method
+- synchronized blocks can be placed inside a method, to synchronize only a part of the code.
+
+29. How to make static blocks thread safe?
+
+
+30. What join() method will do in threads?
+- it holds the execution of currently running thread until the specified thread is dead(finished execution)
+
+31. What wait() method will do in threads?
+- it causes current thread to wait until another thread invokes the notify() method or notifyAll() method for this object. 
+
+32. What yield() method will do in threads?
+- it causes currently executing thread object to temporarily pause and allow other threads to execute.
+
+33. How to create custom annotation?
+
+Servlets and JSPs
+
+1. What is a servlet?
+2. Where does servlets reside?
+3. What are the uses/features of servlets?
+- Resource sharing, load balancing, fault tolerance, dynamic web pages, portability, performance, Extensibility, Security
+4.  Are servlets process based / thred based? - thread based
+5. Name the 2 packages provided by servlet API? - javax.servlet, javax.servlet.http
+6. Servlet life cycle? - init(), service(), destroy()
+7. Methods of servlet - init(), service(), getServletInfo(), getServletCOnfig(), destroy()
+8. What is deployment descriptor?
+- It says how a component/module/apps such as webapp or enterprise app shpuld be deployed. Web.xml is the deployment descriptor. 
+9. how many times init(), service() and destroy() methods are invoked.
+10. What are doGet() and doPost() methods, diff between them?
+11. init() method calls super.inti(config) why?
+12. How do you connect to database in servlets? - class.forName
+13. In how many ways session tracking can be done. What are they? 
+- http session tracking, servlet session tracking, cookies
+14. What is a cookie?
+- Cookie is small piece of info sent by web server for storage at the client as response to the request.
+15. How synchronization is achieved in servlets?
+- javax.servlet.SingleThreadModel
+16. Difference between jsp and html
+- data in db can be retrieved by JSp but not with html, annot make changes at runtime in html so it is static.
+17. What are the implicit objects in jsp.
+- request, response, out, session, config, application
+18. What is Java bean?
+- reusable component having a public constructor through which we can retrieve data.
+19. different tags to call beans in jsp
+- jsp:useBean, jsp:setProperty, jsp:getPrperty
+20. Implicit objects of JSP Expression Language
+- page Context, param, param values, header, cookie, intiparam
+
+AJAX
+
+1. What is AJAX?
+- Interactive and responsive web applications.
+2. Steps to create AJAX application?
+- setting up an application
+- Initiate a Javascript call
+- Create XMLHttpRequest Object
+- Open the object
+- Handle data download
+- Getting data and downloading
+3. What is JSON?
+- light weighted data format used intead of XML to exchange data between client and server without XML parsing.
+- collection of name/value pair
+- ordered list of values
+4. Write AJAX call?
+XMLHTTP.open("GET","ajax.jsp?name=OK");
+5. AJAX constraints?
+- security risk, javascript on browser, browser back button misbehaviour
+
+Spring Framework
+
+1. What is Spring framework?
+- easy way of configuring and resolving dependencies throughout J2EE, it has IOC and many other features.
+- plumbing code, difficult to unit test, performance.
+2. Difference between struts framework and spring framework?
+- struts is web framework, spring is applciation framework.
+- unlike single tier framwworks like struts or hibernate, spring aims to help structure whole applciations in consistent manner.
+- provides POJOs
+3. DIfferent modules in spring framework
+- Spring core, context, AOP, DAO, ORM, WebFlow, WEb MVC.
+4. What is wiring?
+- piecing together all the beans in spring container
+
+
+Spring Core:
+
+1. what is Spring IOC/DI?
+- separating the implementation of an object and the construction of objects.
+- IOC possible only within containers that manage component instantiation and keep an instance of all registered components.
+2. How Spring achieve dependency injection?
+3. In how many ways we can declare dependency injection?
+4. What are different injection techniques?
+5. How to read spring config file?
+6. Difference between BeanFactory and ApplicationContext?
+- Bean factory creates beans, associates objects.
+- Application context resolves text messages, loads files, publish events to beans that are registered as Listeners.
+
+extra
+
+7. What is default scope of Spring bean?
+8. what is default scope of inner bean in spring?
+9. what are different modules in spring?
+10. How to inject list in spring?
+11. how to inject map in spring?
+12. how to inject set in spring?
+13. how to inject properties from properties file in spring?
+
+Spring MVC:
+1. What is spring MVC? why this is used?
+2. what is ModelAndView?
+- holds data to be displayed to the user.
+- view accesses the data stored in MOdel and view for rendering to end user.
+3. How to read resource bundle in spring?
+4. What are different view resolvers in spring mvc?
+- InternalResourceViewResolver
+- surrounds prefix and suffix to a view name
+5. Difference between them?
+6. What is dispatcher servlet.
+- uses handler mapping implementation to figure out which controller whould process the request.
+- handler mapping will look at the URL to figure out which controller to map to.
+- responsible for interactiions between web requests and application model.
+- retrieves data from the request.
+- it is configured in web.xml
+7. Draw Spring MV flow
+8. What does controller class return 
+- ModelandView
+9. Steps to develop web application with Spring MVC
+- Deploy a dispatcher servlet
+- Implement request handler
+- Implement the view
+- Register controller with dispatcher servlet
+- Deploy and test
+10. What is @RequestMapping
+- maps URL to handler method
+
+
+
+Hiberate:
+1. What is hiberante? why hibernate?
+2. What are object states in Hibernate?
+- Transient, persisted, Detatched.
+3. How to create hibenate project from scratch?
+4. How to save an object in hibernate? 
+- session.save(object)
+5. What is org.hibernate.SessionFactory? why this is used for? how many SessionFactory objects will be created in an application?
+- configures Hibernate for the application using the supplied configuration file and allows for a Session object to be instantiated
+6. If only one SessionFactory object for one database. why?
+7. What are different ways to execute queries in hibernate? - HQL, Criteria, Native SQL, Named queries
+8. WHat is ORM
+- maps objects to data in db
+9. what is the use of sessin.delete()?
+-   Remove a persistent instance from the datastore.
+10. what is the use cfg file in hibernate?
+-Hibernate also requires a set of configuration settings related to database and other related parameters. All such information is usually supplied as a standard Java properties file called hibernate.properties, or as an XML file named hibernate.cfg.xml
+
+extra
+
+8. What is criteria? Write a sample logic for querying list using Critera?
+9. What is Criterion?
+10. What is Projection?
+11. What is Expression?
+12. How to give mapping between table and class in hibernate?
+13. What are different relationships, explain?
+14. How to implement inheritance in hibernate?
+15. How to execute batch updates using hibernate?
+16. What is the use session.evict() method?
+17. what is the use of sessin.remove()?
+18. what is difference between session.remove() and session.delete() methods?
+19. what is session.merge() will do?
+
+
+

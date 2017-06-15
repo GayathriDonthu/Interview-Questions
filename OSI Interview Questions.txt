@@ -1,0 +1,23 @@
+OSI
+
+1. What is the difference between == and equals method?
+2. String s = "hi"; 
+     StringBuffer s1 = new StringBuffer(" hi");
+s.equals(s1); 
+3. What are different methods in Object class?
+4. What is the internal implementation of set?
+5. What are different types of injections in spring?
+6. Can we connect to different databases in Hibernate?
+7. Should be have multiple configuration for that?
+8. Is session factory thread safe?
+9. Is session thread safe?
+10. Is transaction thread safe?
+11. What is spring? Advantages of spring?
+12. Explain different components of spring?
+13. What is spring AOP?
+14. What is the difference between Spring JDBC and Hibernate?
+15. Which one is best to implement
+16. What is dependancy injection?
+17. How to get the values of the form when name is not defined in JavaScript?
+18. How HashMap is implemented?
+19. Structure of WSDL 

@@ -1,0 +1,32 @@
+Delloite
+
+1. What is the difference between abstract class and Interface class.
+2. Steps for JDBC connection and write query to get max of emp salary from different Dept tables.
+3. What is Race condition?
+4. What is deadlock? Explain with example.How do you avoid it.
+5. What is the difference between classNotFoundException and NoClassFoundDefError.
+6. What are different types of annotations in Hibernate.
+7. What is connection pool.
+8. Why did you use SOAP.
+9. differences between REST and SOAP.
+10. What are different spring modules
+11. Difference between struts and springs framework.
+12. What are the advantages of spring
+13. What are the advantages of Hibernate
+14. Is Hibernate part of Spring
+15. Draw Venn diagram for left join.
+16. Write query to find get id values greater than 50 from emp table(ID, wid) and Dept table (wid, pid)
+17. Spring with rest
+18. Difference between linked list and array list
+19. Difference between composition and aggregation
+20. Difference between get and load in Hibernate
+21. Life cycle of thread.
+22. Situation in your project where you have done any use of interface and abstract class.
+23. Difference between Comparator and Comparable. Ex code.
+24. What are the collections used in your project.
+25. Why did you use HashMap .. Y not hashtable.
+26. Why did you use array list?
+27. Spring with MVC explain.
+28. What is easy loading and lazy loading. 
+
+

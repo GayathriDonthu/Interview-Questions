@@ -1,0 +1,20 @@
+Bank of America
+
+1. Disadvantages of Java script, JQuery huge code.
+2. What is ajax? And it's disadvantages.
+3. What is context of overloading and overriding.
+4. String x(){} and void x(){}, is it overloading?
+5. How to stop a thread?
+6. What is deadlock? Write a code for deadlock.
+7. What are different types of bean scopes?
+8. Different components of Springs
+9. Which version of Hibernate you have used?
+10. What are comparable and comparator.
+11. Write code for compare()
+12. Difference between String s = new String("ABC"); and String s = "ABC";
+13. Why Java introduced string pool?
+14. How do you perform caching in Hibernate? Write code for that.
+15. How do you relate the associations in Hibernate? Write code.
+16. Write a query to get emp count of the dept.ID
+17.  How you will do performance tuning.
+18. Difference between function and procedure. 

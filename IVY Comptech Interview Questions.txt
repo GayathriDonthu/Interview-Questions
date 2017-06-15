@@ -1,0 +1,16 @@
+IVY Comptech
+
+1. What is object oriented programming?
+2. What is inheritance
+3. What is over loading and overriding 
+4. How to make the features of two classes A and B to be used in class C. Objects to be created for A and B. How is it possible?
+5. What is Exception handling
+6. How the exception thrown by main program is handled by JVM
+7. Difference between Array and array list
+8. How HashMap is implemented  internally.
+9. How array list is implemented?
+10. What happens for array[4] internally? 
+11. What is the necessity of HashMap
+12. Comparison of list and HashMap 
+13. Time complexity of HashMap 
+

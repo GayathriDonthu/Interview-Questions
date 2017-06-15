@@ -1,0 +1,213 @@
+Preparation Questions:
+=============================================
+Design Patterns:
+-----------------------------
+1) What problem solved by Decorator Design pattern?
+2) What is the single design pattern?
+3) Differences between association, aggregation and composition?
+4) What are the differences between State and Strategy design pattern?
+5) What are the differences between Decorator, proxy and adapter design pattern?
+6) What is the differences between Composition and Inheritance?
+7) Concurrency Design patterns?
+A) Active Object 
+   Balk
+   Barrier 
+   Double-Checked lock
+   Read-Write Lock
+   Guarded suspension
+   
+ 
+JDBC:
+1) What is the JDBC?
+2) What are the different statements we have in JDBC?
+3) What are the differences between statement and prepared Statement?
+4) What are the components of JDBC?
+5) What is the DriverManager?
+6) What is the Connection?
+7) What is the ResultSet?
+8) How to call procedures and function?
+9) What are the JDBC Statements?
+10)What is the JDBC API?
+11)Which interface is responsible for transaction management in JDBC?
+12)Why batch processing is required in JDBC?
+13)What does ResultSetMetaData in JDBC?
+14)What does DatabaseMetaData in JDBC?
+15)By using which interface we can store and retrieve images?
+
+Hibernate:
+1)What is the Hibernate?
+2)What is the core components of Hibernate?
+3)Is sessionFactory is threadsafe?
+4)Is session is threadsafe?
+5)What are differences between Session.save() and Session.persist?
+6)What are differences between get() and load()?
+7)What is the session?
+8)What is the ORM?
+9)What is the architecture of Hibernate?
+10)What is the sessionFactory?
+11)What is the difference between update and merge?
+12)What is dirty checking?
+13)How many different types of inheritance strategies we have in Hibernate?
+14)How to make immutable class in Hibernate?
+15)What are the different states of objects in Hibernate?
+16)What is lazy loading?
+17)What are differences between first level cache and second level cache?
+18)What is Hibernate Query Language?
+19)What are the diffent types of mappings we have in Hibernate?
+20)Is it possible collection mapping through one to one and Many to one associations?
+
+Rest WebService:
+1) What is REST?
+2) What are the advantages of REST?
+
+Interview Questions:
+=================================================================
+CoreJava & Junits:
+--------------------
+1)What are differences between HashMap and HashTable?
+2)What are differences between Concurrent HashMap and HashMap?
+3)What is meant by ConcurrentModificationException? How to resolve that?
+4)How you will avoid that runtime null pointer exception?
+5)What is the Grabage collector? when it will be used?
+6)What are the common exceptions or errors you are getting while writing junits? How you will resolve those?How you will overcome in future?
+7)What is the null pointer exception when it will get raised?How you will handle null pointer exception at runtime?
+8)What you will know about java memory handling?
+9)What are the different tools you use for writing test cases?
+10)Who will write test cases in project?
+11)What do you know about volatile keyword?
+12)What are differences between final, finally and finalizer keywords?
+13)What is thread life cycle?
+14)What is the sequence of catch blocks in exception handling? Like can we catch child exception on top of parent exception?
+15)What are the collections used in your project?
+16)What is the difference between Linkedlist and ArrayList?
+17)What is the difference between sleep and wait methods?
+18)What are the rules for Overloading and Overriding?
+19)What are the different ways of creating Threads?
+20)Which one is preferable out of Thread creation methods? Why?
+21)What are differences between Interface and abstraction in java?
+22)What is polymorphism and explain me about different types of polymorphism?
+23)Where did you used polymorphism in current project?
+24)What is difference between HashMap and Concurrent HashMap?
+25)Did Serilization used in your project? Explain me where do you used?
+26)Write sample thread program using Thread class?
+27)What is difference between HashMap and ConcurrentHashMap?
+28)If I have two different objects with same hashCode() what will be the output?
+29)What is the design pattern available in ConcurrentHashMap?
+30)
+
+class A
+   {
+     public void disp()
+        {
+             System.out.println("Hai");
+        }
+   }
+
+class B extends A
+   {
+     private void disp()
+         {
+             System.out.pringln("Hai from B");
+         }
+    }
+
+Will that program will get compile? And is it method overriding?
+}
+31)What is the most common exception arises during junits writing?
+32)What is difference between wait() and sleep()?
+33)Explain me about volatile keyword?
+34)Explain me about transient keyword?
+35)How will make class as immutable?
+36)What are different types of inner class we have?
+37)What you know about anonymous inner class?
+
+
+Spring:
+---------------
+1)What is meant by AOP in spring?
+2)What is meant by IOC in spring?
+3)What is difference between IOC and dependency Injection in spring?
+4)What are the bean life cycle?
+5)Explain about different bean scopes?
+6)Differences between BeanFactory IOC and ApplicationContext IOC?
+7)Which version of Spring you are working?
+
+WebServices:
+-------------------
+1)How to identify Restful API?
+2)What are the differences between SOAP and Restful API?
+3)Which protocal you suggest TCP/IP, HTTP or SOAP? Why?
+4)Which webservice you will approach for error handling? Why?
+5)In terms of failover which Webservice you will suggest? And why?
+6)If there is the requirement like data representation is only xml which webservice you will prefer?
+7)What you know about REST?
+8)What are the difference between get() and post()?
+
+
+Design Pattern:
+--------------------
+1)Explain me about Singleton Design pattern?
+2)What is the return type of Singleton design pattern?
+3)What are the design patterns you aware in your project?
+
+
+Database:
+--------------------
+1)What are the differences between JDBC and Hibernate?
+2)In online web page session is syncrnozied or asynchronized?
+3)In both Session and SessionFactory which is synchronized?
+4)What you know about SessionFactory?
+5)Which JDBC driver you used in your project?
+6)Write query in such a way display only 10 records at a time using Mysql and Oracle.
+7)Write normal sample jdbc program?
+8)What is meant by Cascading in Hibernate? And what are different types of Cascading statement we have in Hibernate?
+9)What you know about fetching in Hibernate?
+10)Which version of Hibernate currently working on?
+11)What you know about indexing?
+
+Agile:
+------------------
+1)What are the advantages of Agile methodologies?
+2)What is meant by follow up meeting in agile?
+3)Is your scrum master sitting in same geographical location?
+4)What is methodology following in your team?
+5)What will discuss in daily scrum meeting?
+6)What is the scrum rhetrospective meeting?
+7)What is the sprint planning meeting?
+
+Miscellaneous & Process:
+--------------------------
+1)Why we require automation process in project?
+2)Did you worked on service oriented architecture? Explain me about it?
+3)What is the most recent bug or error you have faced and how its got fixed?
+4)Explain me about project architecture?
+5)How many environments you have in project like( Prod, Dev, Preprod and QA etc)?
+6)What are the maven commands used in your project?
+7)Explain me about recent critical issue faced by your team and how was it solved?
+8)Explain me about your roles in current project?
+9)What are the new features are available in Java latest version?
+10)What is the java new version?
+11)Explain about current project archiecture?
+12)What is the apache tomcat default port number? If I want to change it where I need to change?
+13)How to change Jboss server port number?
+14)If I wants to change output folder of (.war or .jar or .ear) how it will get done in maven?
+15)Imagine a scenario like you are leading a team of 4 resources. Client deliverables need to be completed by tommorow?
+How you will divide the task and what is your approach?
+16)There was a client escalation from onsite team. How you will handle that situation?
+What are the immediate action  items taken by yourself? What are the action items will take by you in order to not remove that
+kind of situation?
+
+JavaScript:
+------------------
+1)Write a logic that validates a text field doesn't enter null values and digits?
+ 
+Micro Services:
+--------------------
+1)What is the architecture of micro service?
+2)What are the advantages of micro services?
+3)Imagine one scenario like big application functionalities to be implemented as couple of micro services.
+  What is your approach?
+
+
+
+
